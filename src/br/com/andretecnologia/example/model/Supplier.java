@@ -1,18 +1,19 @@
-package br.com.andretecnologia.exemplo.modelo;
+package br.com.andretecnologia.example.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
-public class Despesa {
+@Table(name="Supplier5")
+public class Supplier {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
-	private String descricao;
-	//private Calendar data
-	//getter and setter
+	private String name;
+
 	
 	public int getId() {
 		return id;
@@ -20,12 +21,11 @@ public class Despesa {
 	public void setId(int id) {
 		this.id = id;
 	}
-	public String getDescricao() {
-		return descricao;
+	public String getName() {
+		return name;
 	}
-	public void setDescricao(String descricao) {
-		this.descricao = descricao;
+	public void setName(String name) {
+		this.name = name;
 	}
-	
 	
 }
